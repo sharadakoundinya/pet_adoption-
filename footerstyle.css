@@ -1,0 +1,43 @@
+footer {
+    background-color: #DED0B6;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.organization-info,
+.social-media,
+.contact-info,
+.get-involved {
+    flex: 1;
+    padding: 0 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+a
+{
+    text-decoration: none;
+}

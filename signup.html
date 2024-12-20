@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var name = document.getElementById('name').value;
+  var phoneNumber = document.getElementById('phoneNumber').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+
+
+  console.log('Name:', name);
+  console.log('Phone Number:', phoneNumber);
+  console.log('Email:', email);
+  console.log('Password:', password);
+
+ 
+  alert('Signup successful!');
+});
+    </script>
+
+  <meta charset="UTF-8">
+  <title>Advanced Signup Form</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+button {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+  document.getElementById('signupForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const response = await fetch('signup.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phoneNumber, email, password }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert(result.message);
+        document.getElementById('signupForm').reset();
+      } else {
+        alert('Error: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error connecting to the server.');
+    }
+  });
+</script>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="footerstyle.css">
+    <script src="https://kit.fontawesome.com/8a0e605371.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            
+            background-color: #f5f5f5;
+           
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #desc, #paymentinterface {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+        }
+        #paymentinterface
+        {
+            background-color: #F8E559;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        #button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        #container
+        {
+            display: flex;
+        }
+        #paymentinterface {
+            float: right;
+            width: 400px;
+        }
+        #desc
+        {
+            width:50%;
+            height: 25%;
+        }
+        #houseicon
+        {
+            float: right;
+        }
+        #header
+        {
+            padding: 5px;
+        }
+        #connect
+        {
+            margin-top: -2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p style="font-weight: bold; color: black;font-size: large;" >Donate
+        <a href="home.html"><img src="house.png" alt="home" height="25px" width="25px" id="houseicon"></a></p></div>
+        <div id="container">
+    <div id="desc">
+        <h1>Help our Pals!</h1>
+        <p>Every donation goes out to the tied up rescue/pet care organizations.
+            <br><br> Here is your chance to make a difference in the lives of earth's fellow creatures.</p>
+        <p>Share this on:
+       <a href=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" alt="insta" height="25px" width="25px"></a>
+       <a href=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" alt="fb" height="25px" width="25px"></a>
+       <a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAA3ElEQVR4Ac2SGQDFMBBE1ylOcYpTner0neK0TnGpU53iFKc6xWl+p+f25D7InZ295Cv0mGjFUOzWDVVVa/WykaBiaBBFfsiyory3JASRjs8mInqxUGRw47CIBIy7Ew0Sh0nED4OXCwkNh8h7GrrgCkVK9a7w6Q2BjoVa6Oo9EZEDVJ7I1M4UeMDXzIEhvoukFxNMaP8o4gpon1l9qnqc7DcPIgpd7Ce0t/fJVO0q0qIsVeuY1XwNYK1gwm8J2GAqvHRF5mD7BcG0Rl6yegjw0BqdakE8Bni0RyjyDf4Y1Y0n0wNT4wAAAABJRU5ErkJggg==" alt="X" height="25px" width="25px"></a>
+        </p>
+    </div>
+    
+    <div id="paymentinterface">
+        <form action="payments.html" method="post" >
+            <h3>Donate Now!</h3>
+
+            <label for="Name">Name</label>
+            <input type="text" id="Name"><br><br>
+
+            <label for="Email">Email</label>
+            <input type="text" id="Email"><br><br>
+
+            <label for="phno">Phone Number</label>
+            <input type="number" id="phno"><br><br>
+
+            <!-- <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod">
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI</option> -->
+            </select>
+
+           <input type="submit" value="Proceed" id="button">
+        </form>
+    </div>
+</div>
+
+<footer class="foot">
+    <div class="footer-content">
+        <div class="organization-info">
+          <i class="fa-solid fa-paw   fa-xl" style="color: #421e05;">Care Cuddles</i>
+            <p>Promoting Compassion for All Creatures</p>
+        </div>
+        
+        <div class="social-media">
+            <b><p id="connect">Connect with Us:</p></b>
+            <!-- Add your social media icons here -->
+            <a href="https://www.instagram.com/amtmindia/">
+            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"
+            height="35px"
+            width="35px">
+            </a>
+            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png"
+            height="35px"
+            width="35px">
+  
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAA3ElEQVR4Ac2SGQDFMBBE1ylOcYpTner0neK0TnGpU53iFKc6xWl+p+f25D7InZ295Cv0mGjFUOzWDVVVa/WykaBiaBBFfsiyory3JASRjs8mInqxUGRw47CIBIy7Ew0Sh0nED4OXCwkNh8h7GrrgCkVK9a7w6Q2BjoVa6Oo9EZEDVJ7I1M4UeMDXzIEhvoukFxNMaP8o4gpon1l9qnqc7DcPIgpd7Ce0t/fJVO0q0qIsVeuY1XwNYK1gwm8J2GAqvHRF5mD7BcG0Rl6yegjw0BqdakE8Bni0RyjyDf4Y1Y0n0wNT4wAAAABJRU5ErkJggg=="
+            height="35px"
+            width="35px">
+        </div>
+        
+        <div class="contact-info">
+            <b>Contact Information:</p></b><p>
+            <p>7th Street Road 5th Cross Stella Street Bangalore</p>
+            <p>Phone: 7612345678</p>
+            <p>Email: animalrescue600@gmail.com</p>
+        </div>
+        
+        <div class="get-involved">
+            <b>Get Involved:</p></b><p>
+            <ul>
+                <a href="donate.html"><li>Donate</li></a>
+                <a href="LoginLanding.html"><li>Volunteer</li></a>
+                <a href="adopt.html"><li>Adopt</li></a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="copyright">
+       <b><p>&copy;  2024 - Care Cuddles - All rights reserved.</p></b> 
+    </div>
+  </footer>
+
+    <script>
+        function processPayment() {
+            
+        }
+    </script>
+</body>
+</html>

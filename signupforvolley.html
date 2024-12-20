@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylessss.css">
+    <script src="script.js" defer></script>
+    <title>Full Stack Sign-Up</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e559;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form {
+    display:flexbox;
+    justify-content:left;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+    </style>
+</head>
+<body align="left" text-align-last: center>
+ 
+    <div class="container">
+        <form id="signupForm">
+            <h1>JOIN US NOW</h1>
+            <div class="input-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br><br>
+                <label for="LASTName">Last Name:</label>
+                <input type="text" id="LASTName" name="LASTName" required><br><br>
+            </div>
+            <div class="input-group">
+                <label for="contact">Contact Number:</label>
+                <input type="value" id="contact" name="contact" minlength="10" maxlength="10"><br><br>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="input-group">
+                <label for="address">Address:</label>
+                <textarea cols="20" rows="5" id="address" name="address" required></textarea><br><br>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+            </div>
+            <div class="input-group">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate" required><br><br>
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required><br><br>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("signupForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (validateForm()) {
+            alert("Sign-up successful!");
+            // Additional logic for submitting the form to the server
+        }
+    });
+
+    function validateForm() {
+        const firstName = document.getElementById("firstName").value;
+        const LASTName = document.getElementById("LASTName").value;
+        const address = document.getElementById("address").value;
+        const email = document.getElementById("email").value;
+        const contact = document.getElementById("contact").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const birthdate = document.getElementById("birthdate").value;
+        const gender = document.getElementById("gender").value;
+
+        // Add your custom validation logic here
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return false;
+        }
+
+        // Add more validation rules as needed
+
+        return true;
+    }
+});
+
+    </script>
+
+</body>
+</html>
+

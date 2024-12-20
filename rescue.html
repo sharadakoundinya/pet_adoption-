@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Google Sheet Form</title>
+    <style>
+      /* form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      } */
+      *
+      {
+        background-color:cornsilk;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        padding: 0.5rem;
+        border: 2px solid gray;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      button[type="submit"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color:darkslategrey;
+      }
+      img
+      {
+        float:right
+      }
+      #header
+      {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          // Get the current position of the user
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function showPosition(position) {
+        // Get the latitude and longitude values from the geolocation data
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        // Populate the input field with the latitude and longitude values
+        document.getElementById("Latitude").value = latitude;
+        document.getElementById("Longitude").value = longitude;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header">
+        <p style="font-weight: bold; color: black;">Rescue
+        <a href="home.html"><img src="house.png" alt="home" height="25px" width="25px" id="houseicon"></a></p>
+    </div>
+
+    <form action="https://script.google.com/macros/s/AKfycbzmsL-zdLNPJpyrZ5FPKdukwtQsP-zwcfJ97XDLzVzR1ozY3XwEWFXbIi3midKmJEc/exec" method="post">
+      <label for="Name">Name:</label>
+      <input name="Name" type="text" placeholder="Name" required><br><br>
+      <label for="Name">Phone Number:</label>
+      <input name="Phone Number" type="number" placeholder="Phone Number" minlength="10" maxlength="10" required><br>
+      <p><b>Click the Get Location button to auto-fill the latitude and longitude for our volunteers to access!</b></p>
+      <br>
+      <label for="Latitude">Latitude:</label>
+      <input type="text" id="Latitude" name="Latitude" placeholder="Latitude"><br>
+      <label for="Latitude">Latitude:</label>
+      <input type="text" id="Longitude" name="Longitude" placeholder="Longitude"><br><br>
+      <button type="button" onclick="getLocation()" style="background-color: greenyellow; ">Get Location</button><br><br>
+      <button type="submit">Send Help</button>
+    </form>
+  </body>
+</html>

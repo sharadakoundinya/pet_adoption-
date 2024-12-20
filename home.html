@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8a0e605371.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="footerstyle.css">
+    <style>
+        h3{
+             background-color: aliceblue;
+             opacity: 0.7;
+             color: black;
+             border-radius: 70px;
+             
+        }
+
+        .navbar {
+          border-radius: 30px;
+          margin-left: 900px;
+          width: 500px;
+          font-size: larger;
+          padding-left: 30px;
+          padding-right: 30px;
+          
+        }
+
+        .carrousel{
+          margin-top: 100px;
+            height: 500px;
+            width: 100%;
+        }
+        .cards{
+          margin-top: 900px;
+          height: 400px;
+          width: 1200px;
+          font-family: Arial, Helvetica, sans-serif;
+          
+        }
+
+        button{
+          background-color: aliceblue;
+          border-radius: 20px;
+          height: 50px;
+          width: 100px;
+          border: none;
+        }
+
+        .card{
+          background-color:#F8E559;
+          box-shadow: 10px 20px beige;
+          border-radius: 20px;
+          
+
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            background: linear-gradient(45deg, #EEF296, #FFCD4B);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: #4A4E4D;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        nav a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #6B240C, #6B240C, #6B240C);
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav a:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #6B240C, #6B240C, #BE3144);
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav a:hover:before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        nav a:hover:after {
+            transform: translateX(0);
+        }
+
+        nav a:hover {
+            color: #6B240C;
+        }
+
+        .foot{
+          margin-top: 600px;
+        }
+
+        body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #DED0B6;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.organization-info,
+.social-media,
+.contact-info,
+.get-involved {
+    flex: 1;
+    padding: 0 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button{
+  
+}
+@media (max-width: 768px) {
+            .navbar {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .carrousel {
+                margin-top: 50px;
+                max-width: 100%;
+            }
+
+            .cards {
+                margin-top: 50px;
+                max-width: 100%;
+            }
+
+            .foot {
+                margin-top: 50px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .organization-info,
+            .social-media,
+            .contact-info,
+            .get-involved {
+                flex: none;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .carrousel2{
+            
+            margin-top: 600px;
+            height: 600px;
+            width: 70%;
+
+            
+        }
+        .cardiv1{
+            background-color: rgb(255, 255, 224) ;
+            padding: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            border-radius: 20px;
+            
+        }
+        .nf{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .ch{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #resecuebutton
+        {
+          background-color: aliceblue;
+          text-align: center;
+          height: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+  <nav>
+    <i class="fa-solid fa-paw fa-xl" style="color: #421e05;">Care Cuddles</i>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="LoginLanding.html">Login/Signup</a>
+    <button id="rescuebutton"><a href="Rescue.html" style="color: #BE3144;">Rescue</a></button>
+    
+</nav>
+
+    <div class="carrousel">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1444212477490-ca407925329e?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Donate</h3>
+             
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1452441271666-5d998aa2f6cc?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Volunteer</h3>
+              
+                
+                
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1513002229489-f8a67b1d79f4?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Adopt</h3>
+              
+              
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    </center>
+   
+
+  
+
+    <center>
+  <div class="carrousel2">
+    <h1 class="nf">Have a look at our News Feed!</h1><br>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://www.amtmindia.org/wp-content/uploads/2024/01/AMTM-Blog-Sep-02-2-1.jpg" class="d-block w-100" alt="..." >
+            <div class="cardiv1">
+                <h5><b><u>Embracing Indie-pendency: The Advantages of Adopting an Indie Dog</u></b></h5>
+                In a world where dog lovers often gravitate towards popular breeds, there’s a quiet revolution happening in the canine community. Independent or “indie” dogs are gaining popularity for their unique qualities and the numerous advantages they bring to the table. Let’s explore why adopting an indie might just be the perfect choice for those seeking a loyal and distinct canine companion.<BR>
+
+ 
+
+                <B><u>Unique personalities</u></B><br>
+                
+                One of their standout features is their individualistic personalities. Unlike some standardised breeds with predictable traits, indies often boast a mix of characteristics that make them one-of-a-kind. This uniqueness can add a special charm to your household and create an unparalleled bond.<br>
+                
+                 
+                
+                <b><u>Gratitude & affection</u></b><br>
+                
+                Indies are usually adopted from shelters or rescue organisations. These dogs often form deep connections with their adoptive families, showing a lot of gratitude and affection for the care and love they receive.<br>
+                
+                 
+                
+               <u> <b>Healthier genetic diversity</b></u><br>
+                
+                The Indie breed, by virtue of their mixed heritage, often enjoy a broader gene pool compared to their purebred counterparts. This diversity can contribute to better overall health and resilience to genetic disorders. While responsible breeding practices are crucial for all dogs, their wider genetic range may reduce the risk of hereditary health issues.<br>
+                
+                 
+                
+                <u><b>Lower risk of inherited disorders</b></u><br>
+                
+                Purebred dogs are sometimes prone to certain inherited disorders due to limited gene pools. Being a mix of different breeds, indies tend to have a lower risk of these genetic disorders. This can lead to fewer trips to the vet and a longer, healthier life for your furry friend.<br>
+                
+                 
+                
+                <u><b>Adaptability</b></u><br>
+                
+                They are often known for their adaptability. Their diverse genealogy equips them with a range of traits that make them well-suited for various environments and living conditions. Whether you’re in a bustling city apartment or a suburban home with a yard, an indie dog can adapt to your lifestyle with ease.<br>
+                
+                 
+                
+               <u><b>Lower maintenance costs</b></u> <br>
+                
+                While all dogs require care and attention, indies have lower maintenance costs compared to high-maintenance purebreds. Their diverse genetic makeup can make them hardier, reducing the likelihood of specific health issues that may require expensive treatments.<br>
+                
+                 
+                
+                <u><b>Aesthetic diversity</b></u><br>
+                
+                Indies come in a plethora of shapes, sizes and coat colours. Adopting one allows you to choose a pet that not only matches your lifestyle but also satisfies your aesthetic preferences. From fluffy coats to sleek fur, the visual diversity of indie breeds is sure to capture your heart.</div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://www.amtmindia.org/wp-content/uploads/2024/01/AMTM-Blog-Sep-02-2048x1072.jpg" class="d-block w-100" alt="...">
+            <div class="cardiv1">
+               <h5><u><b>Paws and Passports: A Guide to Travelling Abroad with Pets</b></u></h5><br>
+               <u><b>Microchipping:</b></u><br>
+
+Ensure your pet is microchipped with an ISO 11784/11785 compliant 15-digit pet microchip. Make sure the microchip is registered with your contact details.<br>
+
+ 
+
+<u><b>Pet passport:</b></u><br>
+
+Obtain a pet passport from a registered veterinarian. This document includes your pet’s identification information, vaccination records and health certificates.<br>
+
+ 
+
+<u><b>Vaccinations:</b></u><br>
+
+Make sure your pet is up-to-date on all required vaccinations. A rabies vaccination is usually mandatory, and it must be administered at least 21 days before travel.<br>
+
+ 
+
+<u><b>Health certificate:</b></u><br>
+
+Obtain an accredited veterinarian-signed health certificate. This certificate verifies that your pet is in good health and fit for travel. Some countries require this certificate to be issued within a specific time frame before departure.<br>
+
+ 
+
+<u><b>Destination country requirements:</b></u><br>
+
+Research and understand the specific requirements of the destination country. This may include quarantine periods, additional vaccinations, or specific health checks.<br>
+
+ 
+
+
+
+ 
+
+<u><b>Airline regulations:</b></u><br>
+
+Choose an airline that is pet-friendly and complies with international pet transportation regulations. Some airlines have specific requirements and restrictions for pet travel.<br>
+
+ 
+
+<u><b>Book in advance:</b></u><br>
+
+Inform the airline about your intention to travel with a pet. Airlines have limitations on the number of pets allowed on each flight, so booking early is essential. <br>
+
+ 
+
+
+ 
+
+<u><b>Pet-friendly accommodation:</b></u><br>
+
+If you’re relocating permanently, ensure your new residence is pet-friendly. Check local regulations and find suitable accommodation that welcomes pets.<br>
+
+ 
+
+<u><b>Professional pet relocation services:</b></u><br>
+
+Consider hiring a professional pet relocation service that specialises in international pet transport. They can assist with paperwork and logistics while ensuring compliance with legal regulations.<br><br>
+
+Always double-check the specific requirements of the destination country and consult with your veterinarian to ensure a smooth and stress-free journey for you and your pets. Keep in mind that regulations may change, so staying informed is crucial.
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.amtmindia.org/wp-content/uploads/2024/01/AMTM-Blog-Sep-02-1-2048x1072.jpg" class="d-block w-100" alt="...">
+            <div class="cardiv1">
+             <h5><u><b>Paws, Claws, and Crafts: DIY Toys to Delight Your Furry Friends</b></u></h5>
+             Activate your inner DIY enthusiast and treat your pets to a world of handmade joy! Join us as we embark on a creative journey, crafting toys that will entertain and engage your furry companions. From simple projects for dogs and cats to enriching toys for small pets, let’s explore the magic of crafting homemade playthings that will have tails wagging, whiskers twitching and paws pouncing in excitement.<br>
+
+ 
+
+            <b><u>Tail-wagging treat dispenser for dogs</u></b><br>
+
+ 
+
+Materials needed: Empty plastic bottles, treats, a knife or scissors, and non-toxic paint<br>
+
+ 
+
+Create a stimulating treat dispenser for your dog by repurposing empty plastic bottles. Cut a few holes in the bottle, fill it with your pup’s favourite treats, and watch as they roll it around to release the goodies. Add a splash of colour with pet-safe paint to make it visually appealing.<br>
+
+ 
+
+            <b><u>Feathered frenzy for cats</u></b><br>
+
+
+ Materials needed: Feathers, empty toilet paper rolls, and non-toxic glue<br>
+
+ 
+
+Craft an irresistible feathered toy for your feline friend using empty toilet paper rolls and feathers. Simply attach feathers to the ends of the rolls, creating an enticing plaything that will engage your cat’s natural hunting instincts. You can even sprinkle a bit of catnip for an extra dash of excitement.<br>
+
+ 
+
+<u><b>DIY wonderland for pocket pets</b></u><br>
+
+
+ Materials needed: Cardboard boxes, untreated wood pieces, and non-toxic glue<br>
+
+ 
+
+Create a miniature wonderland for your hamster, mouse, or gerbil by assembling a DIY maze using cardboard boxes and untreated wood pieces. Cut holes in the boxes to create tunnels and hideouts, providing a stimulating environment for your small pets to explore and navigate.<br>
+
+ 
+
+<u><b>Interactive puzzle toy for birds </b></u><br>
+
+
+Materials needed: Paper towel rolls, bird-safe twine, and untreated wooden beads<br>
+
+Craft an engaging puzzle toy for your feathered friend by stringing paper towel rolls onto bird-safe twine, interspersed with untreated wood beads. Hang it in their cage, and watch as your bird explores the different textures and works to retrieve hidden treats from the rolls.<br><br>
+
+ 
+
+As you embark on these DIY pet toy projects, remember that the true magic lies in the shared moments of play. Crafting toys for your pets provides physical and mental stimulation and strengthens the bond between you and your furry companions. Enjoy their joyous reactions as your pets discover and interact with the toys you’ve lovingly crafted. 
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+</center>
+   
+    <center>
+    <div class="cards">
+
+    <h1 class="ch">Donate|Volunteer|Adopt</h1><br>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1623517591357-8cef9d0c7ffb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="600px">
+          <div class="card-body">
+            <h5 class="card-title"><b>Donate</b></h5>
+            <p class="card-text">No amount is too small. It goes a long way to help animals at the rehab centre.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">
+              <button><a href="donate.html" style="text-decoration: none;">Know More</a></button>
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1528998831154-b0276a56dcd9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="..." height="600px">
+          <div class="card-body">
+            <h5 class="card-title"><b>Volunteer</b></h5>
+            <p class="card-text">
+              A few hours a week with the animals means the world to them, not to mention , the memories that will stay with you for a lifetime..</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">
+              <button>
+                <a href="LoginLanding.html" style="text-decoration: none;">Know More</a>
+              </button>
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1680924726448-9f499055fb88?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="..." height="600px">
+          <div class="card-body">
+            <h5 class="card-title"><b>Adopt</b></h5>
+            <p class="card-text">
+              Don’t buy or breed animals while there are many animals deprived of a good home. Come visit us &  you might just meet your soulmate..</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">
+              <button>
+                <a href="adopt.html" style="text-decoration: none;">Know More</a>
+              </button>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+
+
+<footer class="foot">
+  <div class="footer-content">
+      <div class="organization-info">
+        <i class="fa-solid fa-paw   fa-xl" style="color: #421e05;">Care Cuddles</i>
+          <p>Promoting Compassion for All Creatures</p>
+      </div>
+      
+      <div class="social-media">
+          <b><p>Connect with Us:</p></b>
+          <!-- Add your social media icons here -->
+          <a href="https://www.instagram.com/amtmindia/">
+          <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"
+          height="35px"
+          width="35px">
+          </a>
+          <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png"
+          height="35px"
+          width="35px">
+
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAA3ElEQVR4Ac2SGQDFMBBE1ylOcYpTner0neK0TnGpU53iFKc6xWl+p+f25D7InZ295Cv0mGjFUOzWDVVVa/WykaBiaBBFfsiyory3JASRjs8mInqxUGRw47CIBIy7Ew0Sh0nED4OXCwkNh8h7GrrgCkVK9a7w6Q2BjoVa6Oo9EZEDVJ7I1M4UeMDXzIEhvoukFxNMaP8o4gpon1l9qnqc7DcPIgpd7Ce0t/fJVO0q0qIsVeuY1XwNYK1gwm8J2GAqvHRF5mD7BcG0Rl6yegjw0BqdakE8Bni0RyjyDf4Y1Y0n0wNT4wAAAABJRU5ErkJggg=="
+          height="35px"
+          width="35px">
+      </div>
+      
+      <div class="contact-info">
+          <b>Contact Information:</p></b><p>
+          <p>7th Street Road 5th Cross Stella Street Bangalore</p>
+          <p>Phone: 7612345678</p>
+          <p>Email: animalrescue600@gmail.com</p>
+      </div>
+      
+      <div class="get-involved">
+          <b>Get Involved:</p></b><p>
+          <ul>
+              <a href="donate.html" ><li>Donate</li></a>
+              <a href="LoginLanding.html"><li>Volunteer</li></a>
+              <a href="adopt.html" ><li>Adopt</li></a>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="copyright">
+     <b><p>&copy; 2024 - Care Cuddles - All rights reserved.</p></b> 
+  </div>
+</footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
